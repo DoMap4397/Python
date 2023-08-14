@@ -76,3 +76,44 @@ def square(lst):
 test_ret = square([1, 2, 3])
 for value in test_ret:
 	print(value)
+
+# lambda
+ave = lambda a, b, c: (a + b + c)/3
+print(ave(1, 3, 2))
+
+def test():
+	mem = lambda x: x + ' is a member of test'
+# Trả về 1 hàm nặc danh
+	return mem
+# Lấy biến call_mem giữ hàm nặc danh
+call_mem = test()
+# Giá trị chuỗi được đưa vào cho biến x 
+print(call_mem('Đô'))
+print(call_mem)
+
+test_lst = [lambda x: x**2, lambda x: x**3, lambda x: x**4]
+print(test_lst[2](3))
+
+# for
+for func in test_lst:
+	print(func(2))
+
+key = 'Test'
+print({
+	'Google': lambda: 'Gooooooog',
+	'YouTube': lambda: 'Youuuuuuuu',
+	'Test': lambda: 'Abc'
+	}
+	[key]())
+
+# map
+def inc(x): return x + 1
+test = [1, 2, 3, 4]
+# Dùng constructor list để ta dễ quan sát dữ liệu
+print(list(map(inc, test)))
+
+# reduce
+from functools import reduce
+test_add = lambda x, y: x + y
+test = [1, 2, 3, 4, 5]
+print(reduce(test_add, test))
