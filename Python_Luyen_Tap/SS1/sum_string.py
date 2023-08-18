@@ -1,0 +1,8 @@
+print('Nhập vào dãy các số cách nhau bởi khoảng trắng: ')
+dayGiaTri = input()
+danhSachGiaTri = dayGiaTri.split()
+print(danhSachGiaTri)
+danhSachSo = map(int, danhSachGiaTri)
+print(danhSachSo)
+tongDaySo = sum(danhSachSo)
+print('Tổng của dãy số: ', tongDaySo)
