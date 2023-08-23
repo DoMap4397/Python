@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+    <h1 style="color: red">Hello Python + {{content}}</h1>
+    <h2 style="margin-top: 50px">Cố Lên Tôi Ơi!!!</h2>
+    {% for x in range(10) %}
+        {% if x %3 == 0 %}
+            <h3 style="color: blue">{{x}}</h3>
+        {% endif %}
+    {% endfor %}
+    {% for c in cars %}
+        <h3 style="color: lightskyblue">{{c}}</h3>
+    {% endfor %}
+</body>
+</html>
