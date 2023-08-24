@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def hello_word():
+def hello_world():
     return render_template('index.html', content='Test!!!', cars=['BMW', 'Test', 'Motor'])
 
 
